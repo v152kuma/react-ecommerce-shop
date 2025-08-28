@@ -8,14 +8,14 @@
     color: "coral",
   }
 
-  function Banner() {
+  function Banner({headerText}) {
     return (
       <header className='row mb-4'>
           <div className='col-5'>
               <img src={logo} className={logoClass} alt="logo" />
           </div>
           <div className='col-7 mt-5' style={subtitleStyle}>
-            Providing houses all over India !!!
+            {headerText}
           </div>
       </header>
     )
