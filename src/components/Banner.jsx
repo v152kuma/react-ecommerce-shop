@@ -1,14 +1,24 @@
-import React from 'react'
-import logo from '../assets/GloboLogo.png'
 
-function Banner() {
-  return (
-    <header>
-        <div>
-            <img src={logo} alt="logo" />
-        </div>
-    </header>
-  )
-}
+  import logo from '../assets/GloboLogo.png'
+  import {logo as logoClass} from './Banner.module.css'
 
-export default Banner
+  const subtitleStyle = {
+    fontStyle: "italic",
+    fontSize: "x-large",
+    color: "coral",
+  }
+
+  function Banner() {
+    return (
+      <header className='row mb-4'>
+          <div className='col-5'>
+              <img src={logo} className={logoClass} alt="logo" />
+          </div>
+          <div className='col-7 mt-5' style={subtitleStyle}>
+            Providing houses all over India !!!
+          </div>
+      </header>
+    )
+  }
+
+  export default Banner
