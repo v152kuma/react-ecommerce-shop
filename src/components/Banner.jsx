@@ -1,10 +1,11 @@
 import React from 'react'
+import logo from '../assets/GloboLogo.png'
 
 function Banner() {
   return (
     <header>
         <div>
-            <img src="/src/assets/GloboLogo.png" alt="logo" />
+            <img src={logo} alt="logo" />
         </div>
     </header>
   )
