@@ -31,10 +31,10 @@ cd react-ecommerce-shop
 npm install
 ```
 
-### Running the App
+### Running the App in local
 
 ```bash
-npm start
+npm run dev 
 ```
 
 The app will run at [http://localhost:3000](http://localhost:3000).
