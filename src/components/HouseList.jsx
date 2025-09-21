@@ -19,12 +19,23 @@ useEffect(() => {
     setHouses(data);
   };
   fetchData();
-});
+},[]);
 
 const addHouse = () => {
-setHouses([...houses, 
-    { id: 4, address: "101 Pine St", country: "Australia", price: 350000 }]);
-
+  //this needs to be replaced with a POST to the server
+  const newHouse = { id: 4, address: "101 Pine St", country: "Australia", price: 350000 };
+  const addHouse = async () => {
+    const response = await fetch("http://localhost:3001/house", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newHouse),
+    });
+    const data = await response.json();
+    setHouses([...houses, data]);
+  };
+  addHouse();
 };
 
 return (
