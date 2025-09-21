@@ -3,11 +3,14 @@
 
 // Import the express library
 const express = require('express');
+const cors = require('cors');
 
 // Initialize the Express application
 const app = express();
 const PORT = 3001;
 
+// Enable CORS for all routes
+app.use(cors());
 // Middleware to parse incoming JSON requests
 // This is essential for handling POST requests with a JSON body
 app.use(express.json());

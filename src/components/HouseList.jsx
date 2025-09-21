@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HouseRow, { HouseRowMemoized } from "./HouseRow";
 
+// Sample data for houses
 const houseArray = [
 { id: 1, address: "123 Main St", country: "USA", price: 250000 },
 { id: 2, address: "456 Maple Ave", country: "Canada", price: 300000 },
@@ -9,7 +10,16 @@ const houseArray = [
 
 const HouseList = () => {
 
-const [houses, setHouses] = useState(houseArray);
+const [houses, setHouses] = useState([]);
+
+useEffect(() => {
+  const fetchData = async () => {
+    const response = await fetch("http://localhost:3001/house");
+    const data = await response.json();
+    setHouses(data);
+  };
+  fetchData();
+});
 
 const addHouse = () => {
 setHouses([...houses, 
