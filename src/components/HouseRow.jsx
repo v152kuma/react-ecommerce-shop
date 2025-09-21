@@ -1,6 +1,6 @@
 import React from "react";
 import currencyFormatter from "../utils/currencyFormatter";
-const HouseRow = ({house}) => {
+const HouseRow = ({ house }) => {
   return (
     <tr>
       <td>{house.address}</td>
