@@ -12,3 +12,5 @@ const HouseRow = ({ house }) => {
 const HouseRowMemoized = React.memo(HouseRow);
 export default HouseRow;
 export { HouseRowMemoized };
+
+
