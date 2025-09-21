@@ -8,7 +8,7 @@ const houseArray = [
 { id: 3, address: "789 Oak Dr", country: "UK", price: 200000 },
 ];
 
-const HouseList = () => {
+const HouseList = ({ selectHouse }) => {
 
 const [houses, setHouses] = useState([]);
 
@@ -54,7 +54,7 @@ return (
           </tr>
         </thead>
         <tbody>
-          {houses.map(h => <HouseRowMemoized key={h.id} house={h} />)}
+          {houses.map(h => <HouseRowMemoized key={h.id} house={h} selectHouse={selectHouse} />)}
         </tbody>
       </table>
       <button onClick={addHouse} className="btn btn-primary">

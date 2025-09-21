@@ -21,9 +21,9 @@ app.use(express.json());
 
 // Initial data for houses
 let houseArray = [
-    { id: 1, address: "123 Main St", country: "USA", price: 250000 },
-    { id: 2, address: "456 Maple Ave", country: "Canada", price: 300000 },
-    { id: 3, address: "789 Oak Dr", country: "UK", price: 200000 },
+    { id: 1, address: "123 Main St", country: "USA", price: 250000, photo: "1" },
+    { id: 2, address: "456 Maple Ave", country: "Canada", price: 300000, photo: "2" },
+    { id: 3, address: "789 Oak Dr", country: "UK", price: 200000, photo: "3" },
 ];
 
 // Initial data for bids
